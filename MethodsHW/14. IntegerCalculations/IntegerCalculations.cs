@@ -7,9 +7,10 @@ class IntegerCalculations
     static void Main()
     {
         Console.WriteLine("Enter a sequence of integers, separated by spaces: ");
-        int[] input = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
+        int[] input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        Console.WriteLine("Min: {0}\nMax: {1}\nAverage: {2}\nProduct: {3}", ShowMin(input), ShowMax(input), CalcAverage(input), CalcProduct(input));
+        Console.WriteLine("Min: {0}\nMax: {1}\nAverage: {2}\nSum: {3}\nProduct: {4}", 
+            ShowMin(input), ShowMax(input), CalcAverage(input), CalcSum(input), CalcProduct(input));
     }
 
     static int ShowMin(params int[] array)
@@ -20,11 +21,14 @@ class IntegerCalculations
     {
         return array.Max();
     }
-
     static double CalcAverage(params int[] array)
     {
         List<int> list = array.ToList();
         return list.Average();
+    }
+    static long CalcSum(params int[] array)
+    {
+        return array.Sum();
     }
     static long CalcProduct(params int[] array)
     {
