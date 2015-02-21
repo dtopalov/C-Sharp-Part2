@@ -42,17 +42,24 @@ class NumberSystemConversion
     static string ConvertFromDecimal(long number, int toBase)
     {
         string result = "";
-        while (number > 0)
+        if (number == 0)
         {
-            if (number % toBase < 10)
+            result = "0";
+        }
+        else
+        {
+            while (number > 0)
             {
-                result = number % toBase + result;    
-            }
-            else
-            {
-                result = (char)(number%toBase + 'A' - 10) + result;
-            }
-            number /= toBase;
+                if (number % toBase < 10)
+                {
+                    result = number % toBase + result;    
+                }
+                else
+                {
+                    result = (char)(number%toBase + 'A' - 10) + result;
+                }
+                number /= toBase;
+            }    
         }
         return result;
     }

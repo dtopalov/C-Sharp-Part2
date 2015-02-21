@@ -16,11 +16,19 @@ class DecimalToBinary
     static string DecimalToBinaryConverter(int input)
     {
         string result = "";
-        while (input > 0)
+        if (input == 0)
         {
-            result = input%2 + result;
-            input/=2;
+            result = "0";
         }
+        else
+        {
+            while (input > 0)
+            {
+                result = input % 2 + result;
+                input /= 2;
+            }
+        }
+        
         return result;
     }
 }
