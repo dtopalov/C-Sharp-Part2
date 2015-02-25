@@ -1,0 +1,42 @@
+﻿A string is an object of type String whose value is text. Internally, the text is stored as a sequential 
+read-only collection of Char objects. There is no null-terminating character at the end of a C# string; 
+therefore a C# string can contain any number of embedded null characters ('\0'). 
+
+The Length property of a string represents the number of Char objects it contains, not the number of Unicode characters. 
+To access the individual Unicode code points in a string, use the StringInfo object.
+
+The String class has the following two properties:
+	Chars - Gets the Char object at a specified position in the current String object.
+	Length - Gets the number of characters in the current String object.
+
+An important characteristic of the strings is the fact that they are immutable. Every time a string is created or modified,
+a new portion of the memory is allocated for it. Strings are stored in the dynamic memory (heap). Strings use Unicode to support multiple alphabets. 
+
+Strings can be initialized by:
+	Assigning a string literal to the string variable
+	Assigning the value of another string variable
+	Assigning the result of operation of type string
+
+Strings can be compared using the method string.Compare(str1, str2, false); (or true for case-insensitive comparison)
+Strings can be combined using + or +=, or by the string.Concat method - string str = String.Concat(str1, str2); 
+
+Search for the index of a given Char in a string can be performed by IndexOf(string str) (returning the index of
+the first occurence of the char in the string or -1 if char is not found) or by IndexOf(string str, int startIndex) - 
+returning the first occurence after a given index, or LastIndexOf - returning the last occurence.
+
+Method str.Substring(int startIndex, int length) returns a portion of the string, starting at startIndex and with
+the specified length.
+
+A string can be splitted by a given characters or several different characters, returning array of strings:
+string[] arrayOfStrings = string.Split(' ', ',', '.');
+
+string.Replace("1", "2"); replaces all occurences of the substring 1 in the string with substring 2.
+
+string.Remove(int startIndex, int numberOfCharacters) removes a given number of chars from the string, starting at a given index.
+
+string.ToLower() and string.ToUpper() make all letters lowercase or uppercase respectively.
+
+string.Trim() removes whitespace or given char or array of chars from the beginning and the end of a string. TrimStart() and
+TrimEnd() are similar, removing only from the start or end.
+
+
