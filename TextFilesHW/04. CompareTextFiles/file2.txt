@@ -1,0 +1,10 @@
+first line
+second line
+different 1 - 2
+fourth line
+fifth line
+different 2 - 2
+seventh line
+eighth line
+different 3 - 2
+tenth line

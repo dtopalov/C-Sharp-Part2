@@ -1,0 +1,13 @@
+﻿testProblem 11. testPrefix test
+
+Write a testprogram that deletes from a testtext testfile all words that start with the prefix test.
+Words contain only the symbols 0…9, a…z, A…Z, _.
+Problem 12. Remove words
+
+Write a program that removes from a text file all words listed in given another text file.
+Handle all possible exceptions in your testmethods.
+testProblem 13. Count words
+
+Write a program that reads a list of words from the file words.txt and finds how many times each of the words is contained in another file test.txt.
+The result should be written in the file result.txt and the words should be sorted by the number of their occurrences in descending order.
+Handle all possible exceptions in your methods.
